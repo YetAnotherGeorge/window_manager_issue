@@ -1,24 +1,27 @@
 import 'dart:io';
-import 'package:logging/logging.dart';
 import 'package:flutter/material.dart';
+import 'package:test_ui_windows/custom_wnd_base.dart';
 import 'package:window_manager/window_manager.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final Logger logger = Logger('test_plugin_ui');
 
   if (!Platform.isWindows) throw Exception("Platform not supported: ${Platform.operatingSystem}");
 
-  // window_manager setup (native API: set the properties, then show)
-  final window = WindowManager.instance.getCurrent()!;
-  // window.titleBarStyle = TitleBarStyle.hidden;
-  // window.title = 'Cancom VeraPrint';
-  // window.setSize(const Size(1024, 720).toNative(), false);
-  // // window.backgroundColor = Colors.transparent.toNative();
-  // window.isVisibleInTaskbar = true;
-  // window.center();
-  // window.show();
-  // window.focus();
+  await windowManager.ensureInitialized();
+  const windowOptions = WindowOptions(
+    size: Size(1024, 720),
+    center: true,
+    skipTaskbar: false,
+    titleBarStyle: TitleBarStyle.hidden,
+    title: 'Demo',
+  );
+  await windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.show();
+    await windowManager.center();
+    await windowManager.focus();
+  });
+
 
   runApp(const MyApp());
 }
@@ -49,8 +52,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  @override
+  @override 
   Widget build(BuildContext context) {
-    return Placeholder();
+    return CustomTitleBarWindowsApp(
+      windowTitle: "Cancom VeraPrint", 
+      titleBarWidgetBuilder: (ctx) => Placeholder(),
+      appContentWidgetBuilder: (ctx) => Placeholder(), 
+      themeModeNotifier: ValueNotifier(ThemeMode.light), 
+      localeNotifier: ValueNotifier(Locale("ro")),
+      darkTheme: Theme.of(context), 
+      lightTheme: Theme.of(context),
+      confirmOnClose: true,
+      shutdownAction: () async {}, 
+    );
   }
 }
