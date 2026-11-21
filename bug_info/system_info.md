@@ -186,22 +186,22 @@ DeviceGuardCodeIntegrityPolicyEnforcementStatus         : EnforcementMode
 DeviceGuardUserModeCodeIntegrityPolicyEnforcementStatus : Off
 ```
 
-Flutter doctor output: 
+Flutter doctor output - new version for 0.7.0
 ```sh
 PS D:\Backup\CS.Programming\Languages\Dart\Tests\window_manager_issue> flutter doctor -v
-[√] Flutter (Channel stable, 3.47.9, on Microsoft Windows [Version 10.0.26300.9974], locale en-US) [405ms]
-    • Flutter version 3.47.9 on channel stable at C:\Users\georg\.flutter\flutter
+[√] Flutter (Channel stable, 3.50.1, on Microsoft Windows [Version 10.0.26300.9974], locale en-US) [479ms]
+    • Flutter version 3.50.1 on channel stable at C:\Users\georg\.flutter\flutter
     • Upstream repository https://github.com/flutter/flutter.git
-    • Framework revision c197ca5199 (3 weeks ago), 2026-10-29 10:10:20 -0400
-    • Engine revision 89c39edfdf
-    • Dart version 3.13.7
-    • DevTools version 2.60.0
+    • Framework revision ae9b586f34 (3 days ago), 2026-11-18 17:01:07 -0800
+    • Engine revision 4d35714800
+    • Dart version 3.14.0
+    • DevTools version 2.61.0
     • Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios, cli-animations, enable-native-assets, enable-record-use, enable-swift-package-manager,
       omit-legacy-version-file, enable-lldb-debugging, enable-uiscene-migration
 
-[√] Windows Version (Windows 11 or higher, 26H2, 2009) [1,645ms]
+[√] Windows Version (Windows 11 or higher, 26H2, 2009) [1,493ms]
 
-[√] Android toolchain - develop for Android devices (Android SDK version 36.0.0) [1,032ms]
+[√] Android toolchain - develop for Android devices (Android SDK version 36.0.0) [713ms]
     • Android SDK at C:\Users\georg\AppData\Local\Android\sdk
     • Emulator version 37.2.12.0 (build_id 16428233) (CL:N/A)
     • Platform android-37.0, build-tools 36.0.0
@@ -211,23 +211,24 @@ PS D:\Backup\CS.Programming\Languages\Dart\Tests\window_manager_issue> flutter d
     • Java version OpenJDK Runtime Environment Microsoft-14940689 (build 17.0.20.1+1-LTS)
     • All Android licenses accepted.
 
-[√] Chrome - develop for the web [113ms]
+[√] Chrome - develop for the web [132ms]
     • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
 
-[√] Visual Studio - develop Windows apps (Visual Studio Community 2026 18.11.0) [112ms]
+[√] Visual Studio - develop Windows apps (Visual Studio Community 2026 18.11.0) [131ms]
     • Visual Studio at C:\Program Files\Microsoft Visual Studio\18\Community
     • Visual Studio Community 2026 version 18.11.12306.390
     • Windows 10 SDK version 10.0.28000.0
 
-[√] Connected device (3 available) [355ms]
+[√] Connected device (3 available) [645ms]
     • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.26300.9974]
     • Chrome (web)      • chrome  • web-javascript • Google Chrome 158.0.8127.36
     • Edge (web)        • edge    • web-javascript • Microsoft Edge 158.0.4370.33
 
-[√] Network resources [627ms]
+[√] Network resources [792ms]
     • All expected network resources are available.
 
 • No issues found!
+PS D:\Backup\CS.Programming\Languages\Dart\Tests\window_manager_issue> 
 ```
 
 Display info: 

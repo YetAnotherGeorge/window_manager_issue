@@ -13,8 +13,9 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   # with window_manager 6.0, window lags on resize on my machine
-  window_manager: ^0.6.0
+  window_manager: ^0.7.0
   logging: ^1.3.0
+  material_ui: ^1.11.1
 
 dev_dependencies:
   flutter_test:
